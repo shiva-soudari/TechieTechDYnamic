@@ -32,6 +32,7 @@ import com.bumptech.glide.Glide;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.Query;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 import com.rishi.techietech.models.ItemInfo;
@@ -61,6 +62,7 @@ public class MainActivity extends AppCompatActivity {
         FirebaseFirestore db = FirebaseFirestore.getInstance();
 
         db.collection("news")
+                .orderBy("Created", Query.Direction.DESCENDING)
                 .get()
                 .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
                     @Override
@@ -136,11 +138,6 @@ public class MainActivity extends AppCompatActivity {
             Button btnOpen = v.findViewById(R.id.btnOpen);
 
             ImageView image = (ImageView) v.findViewById(R.id.img);
-          /*  Bitmap bitImg = BitmapFactory.decodeResource(getResources(),
-                    R.drawable.ipods);
-            image.setImageBitmap(getRoundedCornerImage(bitImg));
-*/
-
             txtTitle.setText(newsInfo.getTitle());
             txtDesc.setText(newsInfo.getDescription());
 
