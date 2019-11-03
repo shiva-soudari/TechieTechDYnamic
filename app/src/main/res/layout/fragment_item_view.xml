@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="16dp">
+
+
+    <FrameLayout
+        android:id="@+id/frameL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <ImageView
+            android:id="@+id/img"
+            android:background="@drawable/bg_round_corner_white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="200dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ipods"></ImageView>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/info"
+            android:tint="#90000000"></ImageView>
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/linMain"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/frameL">
+
+    <TextView
+        android:textColor="#333333"
+        android:layout_marginTop="20dp"
+        android:textStyle="bold"
+        android:text="Reports suggest that Apple may release its new Airpods pro in few days"
+        android:id="@+id/txtTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textSize="16sp" />
+        <TextView
+            android:id="@+id/txtDesc"
+            android:textColor="#666666"
+            android:layout_marginTop="10dp"
+            android:text="Reports suggest that Apple may release its new Airpods pro in few days Reports suggest that Apple may release its new Airpods pro in few days Reports suggest that Apple may release its new Airpods pro in few days Reports suggest that Apple may release its new Airpods pro in few days Reports suggest that Apple may release its new Airpods pro in few days Reports suggest that Apple may release its new Airpods pro in few days"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:textAllCaps="false"
+            android:textStyle="bold"
+            android:textColor="#575FFC"
+            android:background="@drawable/rounded_corner"
+            android:text="Click on screen for details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></Button>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "791438204171",
+    "firebase_url": "https://techi-tech.firebaseio.com",
+    "project_id": "techi-tech",
+    "storage_bucket": "techi-tech.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:791438204171:android:e4331f24c7202c2fa6160e",
+        "android_client_info": {
+          "package_name": "com.rishi.techietech"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "791438204171-cad7ngvctslu6koepvdda29ai921fpj8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.rishi.techietech",
+            "certificate_hash": "78f2861d691072467832cfd8156696ddef033132"
+          }
+        },
+        {
+          "client_id": "791438204171-84ulueju5b8f8i7dl0eg8klvkmvfapmk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA3Um5mT5b8gwN7rzP7PO7ikofa5LJ7WB0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "791438204171-84ulueju5b8f8i7dl0eg8klvkmvfapmk.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "791438204171-6jd9usd1ortsfs7a9gl7mkm382fjimu9.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.rushi.techietech"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
