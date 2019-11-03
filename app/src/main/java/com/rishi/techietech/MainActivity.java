@@ -1,5 +1,6 @@
 package com.rishi.techietech;
 
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
@@ -9,6 +10,7 @@ import android.graphics.PorterDuff;
 import android.graphics.PorterDuffXfermode;
 import android.graphics.Rect;
 import android.graphics.RectF;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -16,6 +18,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -130,6 +133,7 @@ public class MainActivity extends AppCompatActivity {
            // v.setBackgroundColor(mColor);
             TextView txtTitle = v.findViewById(R.id.txtTitle);
             TextView txtDesc = v.findViewById(R.id.txtDesc);
+            Button btnOpen = v.findViewById(R.id.btnOpen);
 
             ImageView image = (ImageView) v.findViewById(R.id.img);
           /*  Bitmap bitImg = BitmapFactory.decodeResource(getResources(),
@@ -143,6 +147,17 @@ public class MainActivity extends AppCompatActivity {
             System.out.println("=====Link "+newsInfo.getImage());
             Glide.with(getActivity()).load(newsInfo.getImage()).into(image);
 
+            btnOpen.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    String url=newsInfo.getLink();
+                    if (!url.startsWith("http://") && !url.startsWith("https://")) {
+                        url = "http://" + url;
+                    }
+                    Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+                    startActivity(browserIntent);
+                }
+            });
             // textView.setText("Page " + mNum);
             return v;
         }
